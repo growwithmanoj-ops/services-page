@@ -1,4 +1,4 @@
-import { Settings, Check, Loader2, AlertTriangle, Clock } from 'lucide-react'
+import { Settings, Check, Loader2, AlertTriangle, Clock, Headphones } from 'lucide-react'
 
 function ComingSoonButton() {
   return (
@@ -43,10 +43,16 @@ function PendingButton() {
 
 function IncompleteButton() {
   return (
-    <button className="w-full bg-orange-50 hover:bg-orange-100 active:bg-orange-200 text-orange-600 text-sm font-semibold py-3 rounded-lg flex items-center justify-center gap-2 transition-colors">
-      <AlertTriangle size={14} />
-      Activation Incomplete
-    </button>
+    <div className="flex flex-col gap-2">
+      <div className="w-full bg-orange-50 text-orange-600 text-sm font-medium py-2.5 rounded-lg flex items-center justify-center gap-2 select-none">
+        <AlertTriangle size={14} />
+        Activation Incomplete
+      </div>
+      <button className="w-full border border-gray-200 hover:bg-gray-50 active:bg-gray-100 text-gray-700 text-sm font-medium py-2.5 rounded-lg flex items-center justify-center gap-2 transition-colors">
+        <Headphones size={14} className="text-gray-500" />
+        Raise Support Ticket
+      </button>
+    </div>
   )
 }
 
